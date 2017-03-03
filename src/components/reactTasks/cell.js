@@ -22,7 +22,7 @@ class Cell extends React.Component {
 
   render() {
     return (
-      <div
+      <button
         style={{
           height: '200',
           width: '200',
@@ -43,7 +43,7 @@ class Cell extends React.Component {
             marginBottom: 'auto'
           }}
         >{this.props.text}</p>
-      </div>
+      </button>
     )
   }
 }
