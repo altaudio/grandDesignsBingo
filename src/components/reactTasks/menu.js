@@ -30,15 +30,28 @@ class Menu extends React.Component {
         // Set menu title from state
         // Menu links,shown or hidden if menuOpen true/false
       <div
-        style={{ height: this.state.menuHeight, backgroundColor: 'black', textAlign: 'center', color: 'white', fontSize: '20px' }}
+        style={{
+          height: this.state.menuHeight,
+          backgroundColor: 'black',
+          textAlign: 'center',
+          color: 'white',
+          fontSize: '20px' }}
       >
+
         <p hidden={!this.state.menuOpen}>Grand Designs Bingo</p>
         <a href="http://localhost:3000/reactTasks#" hidden={!this.state.menuOpen}>Home</a>
         <a href="http://localhost:3000/reactTasks#" hidden={!this.state.menuOpen}>Blog</a>
         <a href="http://localhost:3000/reactTasks#" hidden={!this.state.menuOpen}>Contact</a>
+
         <a
           href="http://localhost:3000/reactTasks#"
-          style={{ fontWeight: 'bold', color: 'white', fontSize: '30px', textDecoration: 'none', display: 'block' }}
+          style={{
+            fontWeight: 'bold',
+            color: 'white',
+            fontSize: '30px',
+            textDecoration: 'none',
+            display: 'block' }}
+
           onClick={() => this.menuClick()}
         >{this.state.menuControl}
         </a>
