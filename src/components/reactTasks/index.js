@@ -8,7 +8,7 @@ export default () => {
   return (
     <div>
       <Menu />
-      <div style={{display : 'inline-block', width: '700', marginLeft: 'auto', marginRight: 'auto', }}>
+      <div style={{ display: 'inline-block', width: '700', marginLeft: 'auto', marginRight: 'auto', }}>
         <Cell text={randText[0]} />
         <Cell text={randText[1]} />
         <Cell text={randText[2]} />
@@ -20,7 +20,7 @@ export default () => {
         <Cell text={randText[8]} />
       </div>
 
-      <div style={{display : 'block'}}>
+      <div style={{ display: 'block' }}>
         <CommentsBox />
       </div>
     </div>
