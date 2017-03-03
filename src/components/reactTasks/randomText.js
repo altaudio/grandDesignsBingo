@@ -1,4 +1,4 @@
-// Grand Designs Bingo>
+import _ from 'lodash'
 
 const houseCells = [
   'Wife gets pregnant.',
