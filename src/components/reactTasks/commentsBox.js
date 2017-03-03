@@ -1,5 +1,5 @@
 import React from 'react'
-import _ from 'lodash'
+import DisplayComments from './displayComments'
 
 class CommentsBox extends React.Component {
 
@@ -11,10 +11,14 @@ class CommentsBox extends React.Component {
       { name: 'Dan Ellin', comment: 'This game is totes amazeballs' },
       { name: 'Gordon Miller', comment: 'I love grand designs me' },
       { name: 'Dan Ellin', comment: 'Gordon what is ur fave epsiode?' },
-      { name: 'h8GrndDesgns', comment: 'Kevin is a idiot' }
+      { name: 'h8GrndDesgns', comment: 'Kevin is a idiot' },
+      { name: 'Hello', comment: 'I Just watched the one with the windmill' }
     ],
       comment: '',
-      name: '' }
+      name: '',
+      moreComments: 'true',
+      commentsMax: '4',
+      moreCommentsLabel: 'Show All Comments' }
   }
 
   // When comment input field changes set comment in state
@@ -37,16 +41,28 @@ class CommentsBox extends React.Component {
     this.setState({ comment: '', name: '' })
   }
 
+  // Show more or less comments and change button text
+  moreComments() {
+    // Set more or less comments bool to inverse
+    this.setState({ moreComments: !this.state.moreComments })
+
+    // If more comments is true show all comments and change button text to show less comments
+    if (this.state.moreComments) {
+      this.setState({ commentsMax: this.state.comments.length })
+      this.setState({ moreCommentsLabel: 'Show Less Comments' })
+    } else {
+    // if more comments is false, show 4 comments and hcange button text to show more comments
+      this.setState({ commentsMax: '4' })
+      this.setState({ moreCommentsLabel: 'Show More Comments' })
+    }
+  }
+
   render() {
     return (
       <div>
         <h3>Comments</h3>
-
-        <ul>
-          {_.map(this.state.comments, (comment) => {
-            return <li>{`${comment.name} commented: ${comment.comment}`}</li>
-          })}
-        </ul>
+        <DisplayComments comments={this.state.comments} commentsMax={this.state.commentsMax} />
+        <button onClick={() => this.moreComments()}>{this.state.moreCommentsLabel}</button>
 
         <h3>Add Comment</h3>
         <p>Name:</p>
@@ -55,7 +71,7 @@ class CommentsBox extends React.Component {
         <p>Comment:</p>
         <input value={this.state.comment} onChange={(value) => this.commentChange(value)} />
 
-        <button onClick={(value) => this.addComment(value)}>Add Comment</button>
+        <button onClick={() => this.addComment()}>Add Comment</button>
 
       </div>
     )
