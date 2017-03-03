@@ -24,8 +24,8 @@ class Cell extends React.Component {
     return (
       <button
         style={{
-          height: '200',
-          width: '200',
+          height: '150',
+          width: '150',
           backgroundColor: this.state.colour,
           marginTop: '50',
           marginLeft: '50',
@@ -37,7 +37,7 @@ class Cell extends React.Component {
         <p
           style={{
             color: this.state.fontColour,
-            fontSize: 20,
+            fontSize: 12,
             textAlign: 'center',
             marginTop: 'auto',
             marginBottom: 'auto'

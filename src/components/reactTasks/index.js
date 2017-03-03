@@ -1,13 +1,14 @@
 import React from 'react'
 import Menu from './menu'
 import Cell from './cell'
+import CommentsBox from './commentsBox'
 import { randText } from './randomText.js'
 
 export default () => {
   return (
     <div>
       <Menu />
-      <div style={{ width: '800', marginLeft: 'auto', marginRight: 'auto' }}>
+      <div style={{ width: '700', marginLeft: 'auto', marginRight: 'auto'}}>
         <Cell text={randText[0]} />
         <Cell text={randText[1]} />
         <Cell text={randText[2]} />
@@ -17,9 +18,11 @@ export default () => {
         <Cell text={randText[6]} />
         <Cell text={randText[7]} />
         <Cell text={randText[8]} />
-
       </div>
 
+      <div style={{display : 'inline-block'}}>
+        <CommentsBox />
+      </div>
     </div>
 
   )
