@@ -31,6 +31,7 @@ class Cell extends React.Component {
           marginLeft: '50',
           float: 'left' }}
 
+
         onClick={() => this.handleClick()}
       >
 
