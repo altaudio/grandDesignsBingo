@@ -1,14 +1,12 @@
 import React from 'react'
-import Hello from './hello'
-
+import Menu from './menu'
+import Cell from './cell'
 
 export default () => {
   return (
     <div>
-      <p>Question 1 Answer</p>
-      <Hello />
-
-      <p>Question 2 Answer</p>
+      <Menu />
+      <Cell />
 
     </div>
   )

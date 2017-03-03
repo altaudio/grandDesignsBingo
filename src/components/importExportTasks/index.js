@@ -1,10 +1,3 @@
-import React from 'react' //ignore this
+import React from 'react'
 
-// Answers go here!
-
-
-
-
-
-// Ignore this!
 export default () => <p>Import Export Tasks. Open your debugger :)</p>
