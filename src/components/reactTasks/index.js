@@ -1,4 +1,5 @@
 import React from 'react'
+import _ from 'lodash'
 import Menu from './menu'
 import Cell from './cell'
 import CommentsBox from './commentsBox'
@@ -8,19 +9,13 @@ export default () => {
   return (
     <div>
       <Menu />
-      <div style={{ width: '700', marginLeft: 'auto', marginRight: 'auto'}}>
-        <Cell text={randText[0]} />
-        <Cell text={randText[1]} />
-        <Cell text={randText[2]} />
-        <Cell text={randText[3]} />
-        <Cell text={randText[4]} />
-        <Cell text={randText[5]} />
-        <Cell text={randText[6]} />
-        <Cell text={randText[7]} />
-        <Cell text={randText[8]} />
+      <div style={{ display: 'inline-block', width: '700', marginLeft: 'auto', marginRight: 'auto', }}>
+
+        {_.times(9, (index) => <Cell text={randText[index]} />)}
+
       </div>
 
-      <div style={{display : 'inline-block'}}>
+      <div style={{ display: 'block' }}>
         <CommentsBox />
       </div>
     </div>

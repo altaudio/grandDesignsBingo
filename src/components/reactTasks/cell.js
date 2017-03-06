@@ -5,19 +5,25 @@ class Cell extends React.Component {
 
   constructor() {
     super()
-    this.state = { pressed: true, colour: 'black', fontColour: 'white' }
+    this.state = { pressed: true }
   }
 
   handleClick() {
     this.setState({ pressed: !this.state.pressed })
+  }
 
+  fontColour() {
     if (this.state.pressed) {
-      this.setState({ colour: '#b3ffb3' })
-      this.setState({ fontColour: 'black' })
-    } else {
-      this.setState({ colour: 'black' })
-      this.setState({ fontColour: 'white' })
+      return 'white'
     }
+    return 'black'
+  }
+
+  buttonColour() {
+    if (this.state.pressed) {
+      return 'black'
+    }
+    return '#b3ffb3'
   }
 
   render() {
@@ -26,17 +32,18 @@ class Cell extends React.Component {
         style={{
           height: '150',
           width: '150',
-          backgroundColor: this.state.colour,
+          backgroundColor: this.buttonColour(),
           marginTop: '50',
           marginLeft: '50',
           float: 'left' }}
+
 
         onClick={() => this.handleClick()}
       >
 
         <p
           style={{
-            color: this.state.fontColour,
+            color: this.fontColour(),
             fontSize: 12,
             textAlign: 'center',
             marginTop: 'auto',
