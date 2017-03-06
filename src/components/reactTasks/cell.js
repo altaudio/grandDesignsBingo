@@ -5,27 +5,25 @@ class Cell extends React.Component {
 
   constructor() {
     super()
-    this.state = { pressed: true}
+    this.state = { pressed: true }
   }
 
   handleClick() {
-    this.setState({ pressed: !this.state.pressed });
+    this.setState({ pressed: !this.state.pressed })
   }
 
-  fontColour () {
-    if (this.state.pressed){
+  fontColour() {
+    if (this.state.pressed) {
       return 'white'
-    } else {
+    }
+    return 'black'
+  }
+
+  buttonColour() {
+    if (this.state.pressed) {
       return 'black'
     }
-  }
-
-  buttonColour () {
-    if (this.state.pressed){
-      return 'black';
-    } else {
-      return '#b3ffb3';
-    }
+    return '#b3ffb3'
   }
 
   render() {

@@ -15,4 +15,4 @@ export const randText = _.shuffle([
   'The build is described as a breakthrough in eco housing',
   "The house doesn't get waterproofed in time",
   "Kevin doesn't like the rendering",
-  'A cutting edge material is used']);
+  'A cutting edge material is used'])

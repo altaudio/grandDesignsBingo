@@ -1,4 +1,5 @@
 import React from 'react'
+import _ from 'lodash'
 import Menu from './menu'
 import Cell from './cell'
 import CommentsBox from './commentsBox'
