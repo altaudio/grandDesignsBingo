@@ -35,10 +35,9 @@ class CommentsBox extends React.Component {
   addComment() {
     this.setState({ comments:
     [{ name: this.state.name, comment: this.state.comment },
-      ...this.state.comments]
+      ...this.state.comments], 
+      comment: '', name: '' 
     })
-
-    this.setState({ comment: '', name: '' })
   }
 
   // Show more or less comments and change button text
@@ -48,12 +47,10 @@ class CommentsBox extends React.Component {
 
     // If more comments is true show all comments and change button text to show less comments
     if (this.state.moreComments) {
-      this.setState({ commentsMax: this.state.comments.length })
-      this.setState({ moreCommentsLabel: 'Show Less Comments' })
+      this.setState({ commentsMax: this.state.comments.length, moreCommentsLabel: 'Show Less Comments' });
     } else {
     // if more comments is false, show 4 comments and hcange button text to show more comments
-      this.setState({ commentsMax: '4' })
-      this.setState({ moreCommentsLabel: 'Show More Comments' })
+      this.setState({ commentsMax: '4', moreCommentsLabel: 'Show More Comments' });
     }
   }
 

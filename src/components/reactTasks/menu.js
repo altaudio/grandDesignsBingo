@@ -14,12 +14,10 @@ class Menu extends React.Component {
 
     if (this.state.menuOpen) {
       // if menuOpen, expand menu and change title
-      this.setState({ menuHeight: 100 })
-      this.setState({ menuControl: '-' })
+      this.setState({ menuControl: '-', menuHeight: 100 });
     } else {
       // if menuOpen false, retract menu and change title
-      this.setState({ menuHeight: 40 })
-      this.setState({ menuControl: '+' })
+      this.setState({ menuControl: '+', menuHeight: 40 });
     }
   }
 
